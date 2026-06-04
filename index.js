@@ -15,12 +15,17 @@ program
   .version('1.0.0')
   .parse(process.argv);
 
-console.log(
-  boxen(
-    pc.red(pc.bold('🔥 PKG ROAST')) + '\n' + pc.gray('Prepare to be judged.'),
-    { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'red' }
-  )
-);
+const banner = `
+    ██████╗ ██╗  ██╗ ██████╗    ██████╗  ██████╗  █████╗ ███████╗████████╗
+    ██╔══██╗██║ ██╔╝██╔════╝    ██╔══██╗██╔═══██╗██╔══██╗██╔════╝╚══██╔══╝
+    ██████╔╝█████╔╝ ██║  ███╗   ██████╔╝██║   ██║███████║███████╗   ██║   
+    ██╔═══╝ ██╔═██╗ ██║   ██║   ██╔══██╗██║   ██║██╔══██║╚════██║   ██║   
+    ██║     ██║  ██╗╚██████╔╝   ██║  ██║╚██████╔╝██║  ██║███████║   ██║   
+    ╚═╝     ╚═╝  ╚═╝ ╚═════╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝   
+`;
+
+console.log(pc.red(banner));
+console.log(pc.gray('    Prepare to be judged.\n'));
 
 const pkgPath = path.join(process.cwd(), 'package.json');
 
