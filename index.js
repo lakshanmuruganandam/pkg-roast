@@ -25,13 +25,13 @@ const banner = `
 `;
 
 console.log(pc.red(banner));
-console.log(pc.gray('    Prepare to be judged.\n'));
+console.log(pc.gray('    Prepare to be judged.'));
+console.log(pc.dim('    Architected by @lakshanmuruganandam\n'));
 
 const pkgPath = path.join(process.cwd(), 'package.json');
 
 if (!fs.existsSync(pkgPath)) {
-  console.log(pc.red('❌ No package.json found in this directory. Are you even writing code?'));
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
+  console.log(pc.red('❌ No package.json found. You don\'t even have a project to roast.'));
   process.exit(1);
 }
 
@@ -40,7 +40,6 @@ try {
   pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
 } catch (e) {
   console.log(pc.red('❌ Your package.json is invalid JSON. I can\'t even roast this, it\'s just broken.'));
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
   process.exit(1);
 }
 
@@ -49,7 +48,6 @@ const depNames = Object.keys(deps);
 
 if (depNames.length === 0) {
   console.log(pc.green('✨ Zero dependencies? Look at you, Mr. Vanilla JS. I respect it.'));
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
   process.exit(0);
 }
 
@@ -99,10 +97,8 @@ const run = async () => {
       await new Promise(r => setTimeout(r, 500));
       console.log();
     }
-    await typeWriter(pc.red("Do better."));
+    await typeWriter(pc.red("Good luck. You're going to need it."));
   }
-
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
 };
 
 run();
