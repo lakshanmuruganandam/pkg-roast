@@ -1,14 +1,22 @@
 {
   "name": "pkg-roast",
   "version": "1.0.4",
-  "description": "",
+  "description": "Prepare to be judged based on your node_modules.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "npm",
+    "packages",
+    "roast",
+    "cli",
+    "dependencies",
+    "node_modules",
+    "audit"
+  ],
+  "author": "Lakshan Muruganandam <lakshan@example.com>",
+  "license": "MIT",
   "dependencies": {
     "boxen": "^8.0.1",
     "cli-spinners": "^3.4.0",
