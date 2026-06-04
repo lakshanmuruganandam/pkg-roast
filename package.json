@@ -1,6 +1,6 @@
 {
   "name": "pkg-roast",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Prepare to be judged based on your node_modules.",
   "main": "index.js",
   "scripts": {
